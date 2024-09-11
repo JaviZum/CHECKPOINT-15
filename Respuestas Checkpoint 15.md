@@ -10,19 +10,20 @@ Utiliza las **solicitudes HTTP** para comunicarse con una API, lo cual nos permi
 
 A modo de ejemplo se muestra como sería la obtención de datos a través de una solicitud HTTP empleando la librería **Axios**; más adelante se acompañará un ejemplo en detalle, siendo este más enfocado a mostrar la estructura que utiliza: 
 
-```**axios.get('https://api.example.com/data')**
+```
+axios.get('https://api.example.com/data')
 
-**.then(response => {**
+.then(response => {
 
-**console.log('Datos recibidos:', response.data);**
+console.log('Datos recibidos:', response.data);
 
-**})**
+})
 
-**.catch(error => {**
+.catch(error => {
 
-**console.error('Error en la solicitud GET:', error);**
+console.error('Error en la solicitud GET:', error);
 
-**});**
+});
 ```
 A pesar de las pocas líneas que implementa el código, ya nos está dando una lectura a través de la consola, así como gestionando y mostrando mensajes de error en el caso de que la solicitud fuera fallida…
 
@@ -40,28 +41,31 @@ Los estados de una Promesa son los siguientes:
 
 Antes de poder utilizar la librería, hemos de importarla como se hace habitualmente con cualquier librería externa:
 
-**import axios from 'axios';**
-
+```
+import axios from 'axios';
+```
 Y ahora ya podríamos realizar una solicitud a la API, para obtener información por ejemplo del índice de desertificación de la península.
 
-**axios.get('https://opendata.aemet.es/opendata/api/valores/climatologicos/inventarioestaciones/todasestaciones/?api_key=jyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbW9udGVyb2dAYWVtZXQuZXMiLCJqdGkiOiI3NDRiYmVhMy02NDEyLTQxYWMtYmYzOC01MjhlZWJlM2FhMWEiLCJleHAiOjE0NzUwNTg3ODcsImlzcyI6IkFFTUVUIiwiaWF0IjoxNDc0NjI2Nzg3LCJ1c2VySWQiOiI3NDRiYmVhMy02NDEyLTQxYWMtYmYzOC01MjhlZWJlM2FhMWEiLCJyb2xlIjoiIn0.xh3LstTlsP9h5cxz3TLmYF4uJwhOKzA0B6-vH8lPGGw') **
+```
+axios.get('https://opendata.aemet.es/opendata/api/valores/climatologicos/inventarioestaciones/todasestaciones/?api_key=jyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqbW9udGVyb2dAYWVtZXQuZXMiLCJqdGkiOiI3NDRiYmVhMy02NDEyLTQxYWMtYmYzOC01MjhlZWJlM2FhMWEiLCJleHAiOjE0NzUwNTg3ODcsImlzcyI6IkFFTUVUIiwiaWF0IjoxNDc0NjI2Nzg3LCJ1c2VySWQiOiI3NDRiYmVhMy02NDEyLTQxYWMtYmYzOC01MjhlZWJlM2FhMWEiLCJyb2xlIjoiIn0.xh3LstTlsP9h5cxz3TLmYF4uJwhOKzA0B6-vH8lPGGw')
 
-**.then(response => { console.log('Datos recibidos:', response.data); })**
 
+.then(response => { console.log('Datos recibidos:', response.data); })
+```
 La respuesta que nos daría la API de AEMET en este caso sería un conjunto de datos con el siguiente formato:
+```
+{
 
-**{**
+"descripcion" : "exito",
 
-**"descripcion" : "exito",**
+"estado" : 200,
 
-**"estado" : 200,**
+"datos" : "https://opendata.aemet.es/opendata/sh/f24dba3a",
 
-**"datos" : "https://opendata.aemet.es/opendata/sh/f24dba3a",**
+"metadatos" : "https://opendata.aemet.es/opendata/sh/142417df"
 
-**"metadatos" : "https://opendata.aemet.es/opendata/sh/142417df"**
-
-**}**
-
+}
+```
 En los datos recibidos podemos observar que la solicitud se ejecutó satisfactoriamente por el valor de estado 200. 
 
 Yendo a la página  **[https://opendata.aemet.es/opendata/sh/f24dba3a](https://opendata.aemet.es/opendata/sh/f24dba3a)**, obtenemos una imagen de la península ibérica con el mapa solicitado. (Se puede apreciar que toda la Cornisa Cantábrica, donde vivimos,  es un auténtico vvergel vestidito de #.
@@ -80,49 +84,51 @@ El enlace adjunto sólo funcionará si se dispone del API KEY que se utilizó en
 
 En el siguiente ejemplo se muestra otro de los puntos fuertes de **Axios**, la gestión de errores. La propia librería se encargará del manejo de los errores que se nos puedan presentar en la comunicación con la API.
 
-**axios.get('https://api.example.com/data')**
+```
+axios.get('https://api.example.com/data')
 
-**.then(response => {**
+.then(response => {
 
-**console.log('Datos recibidos:', response.data); ** 
+console.log('Datos recibidos:', response.data);
 
 // Maneja la respuesta exitosa
 
-**})**
+})
 
-**.catch(error => {**
+.catch(error => {
 
 // Manejar errores
 
-**if (error.response) {**
+if (error.response) {
 
 // La solicitud se completó y el servidor respondió con un código de estado fuera del rango 2xx
 
-**console.error('Error en la respuesta:', error.response.data);**
+console.error('Error en la respuesta:', error.response.data);
 
-**console.error('Código de estado:', error.response.status);**
+console.error('Código de estado:', error.response.status);
 
-**console.error('Encabezados:', error.response.headers);**
+console.error('Encabezados:', error.response.headers);
 
-**} else if (error.request) {**
+} else if (error.request) {
 
 // La solicitud fue hecha pero no se recibió respuesta (problema de red, timeout, etc.)
 
-**console.error('No se recibió respuesta del servidor:', error.request);**
+console.error('No se recibió respuesta del servidor:', error.request);
 
-**} else {**
+} else {
 
 // Ocurrió un error al configurar la solicitud
 
-**console.error('Error al configurar la solicitud:', error.message);**
+console.error('Error al configurar la solicitud:', error.message);
 
-**}**
+}
 
-**console.error('Información completa del error:', error.config);  **
+console.error('Información completa del error:', error.config);
 
 // Muestra la configuración que se usó en la solicitud
 
-**});**
+**});
+```
 
 Según las respuestas que nos dé el servicio, podremos mostrar un error u otro para aislar y enfocar cuál ha sido el error que se ha producido al hacer la solicitud.
 
@@ -217,16 +223,18 @@ Seguidamente acompaño un listado ampliando las características principale de l
 
 Este es uno de los usos más comunes. Queremos saber cuando el usuario va a pulsar un botón para realizar determinada acción en la página; podría tratarse de la casilla de un formulario, señalar una casilla de validación, o cualquier otra…
 
-**&lt;button id="miBoton">Haz clic en mí&lt;/button>**
+```
+&lt;button id="miBoton">Haz clic en mí&lt;/button>
 
-**const boton = document.getElementById('miBoton');**
+const boton = document.getElementById('miBoton');
 
-**boton.addEventListener('click', () => {**
+boton.addEventListener('click', () => {
 
-**alert('¡Botón clickeado!');**
+alert('¡Botón clickeado!');
 
-**});**
+});
 
+```
 Cuando el usuario hace click en el botón, se mostrará un mensaje de alerta.
 
 La primera parte del código, la referida al botón, pertenece al HTML.
@@ -236,12 +244,13 @@ La primera parte del código, la referida al botón, pertenece al HTML.
 
 Event listeners esperando al presionar de una  tecla.
 
-**document.addEventListener('keydown', (event) => {**
+```
+document.addEventListener('keydown', (event) => {
 
-**console.log(`Tecla presionada: ${event.key}`);**
+console.log(`Tecla presionada: ${event.key}`);
 
-**});**
-
+});
+```
 Cada vez que el usuario presiona una tecla, se imprime en la consola el nombre de la tecla presionada.
 
 
@@ -249,11 +258,13 @@ Cada vez que el usuario presiona una tecla, se imprime en la consola el nombre d
 
 Respuesta al desplazamiento del usuario en la página.
 
-**window.addEventListener('scroll', () => {**
+```
+window.addEventListener('scroll', () => {
 
-**console.log('La página se está desplazando.');**
+console.log('La página se está desplazando.');
 
-**});**
+});
+```
 
 Cada vez que el usuario se desplaza por la página, se imprime un mensaje en la consola.
 
@@ -262,14 +273,16 @@ Cada vez que el usuario se desplaza por la página, se imprime un mensaje en la 
 
 Puedes reaccionar cuando el valor de un campo de texto cambia.
 
-**&lt;input type="text" id="miCampoTexto" placeholder="Escribe algo">**
 
-**const campoTexto = document.getElementById('miCampoTexto');**
+```
+&lt;input type="text" id="miCampoTexto" placeholder="Escribe algo">
 
-**campoTexto.addEventListener('input', () => {**
+const campoTexto = document.getElementById('miCampoTexto');
 
-**console.log(`Valor actual: ${campoTexto.value}`);**
+campoTexto.addEventListener('input', () => {
 
-**});**
+console.log(`Valor actual: ${campoTexto.value}`);
 
+});
+```
 Cuando el usuario escribe o cambia el valor del campo de texto, se muestra el nuevo valor en la consola.
