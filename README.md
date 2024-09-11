@@ -1,4 +1,4 @@
-# CHECKPOINT-15
+## CHECKPOINT-15
 
 Las preguntas a responder son las siguientes:
 
