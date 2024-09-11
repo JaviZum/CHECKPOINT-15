@@ -10,7 +10,7 @@ Utiliza las **solicitudes HTTP** para comunicarse con una API, lo cual nos permi
 
 A modo de ejemplo se muestra como sería la obtención de datos a través de una solicitud HTTP empleando la librería **Axios**; más adelante se acompañará un ejemplo en detalle, siendo este más enfocado a mostrar la estructura que utiliza: 
 
-**axios.get('https://api.example.com/data')**
+```**axios.get('https://api.example.com/data')**
 
 **.then(response => {**
 
@@ -23,7 +23,7 @@ A modo de ejemplo se muestra como sería la obtención de datos a través de una
 **console.error('Error en la solicitud GET:', error);**
 
 **});**
-
+```
 A pesar de las pocas líneas que implementa el código, ya nos está dando una lectura a través de la consola, así como gestionando y mostrando mensajes de error en el caso de que la solicitud fuera fallida…
 
 Una de las grandes ventajas que tiene **Axios **es que realiza las citadas solicitudes de forma asíncrona. Normalmente estas acciones no se ejecutarán instantáneamente, sino que demorarán algo de tiempo en llevarse a cabo. En lugar de esperar, la página seguirá corriendo mientras **Axios** se encarga de gestionar los estados de las Promesas, que es como se les llama a estas operaciones asíncronas.
