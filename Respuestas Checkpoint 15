@@ -12,17 +12,17 @@ A modo de ejemplo se muestra como sería la obtención de datos a través de una
 
 **axios.get('https://api.example.com/data')**
 
-**  .then(response => {**
+**.then(response => {**
 
-**    console.log('Datos recibidos:', response.data);**
+**console.log('Datos recibidos:', response.data);**
 
-**  })**
+**})**
 
-**  .catch(error => {**
+**.catch(error => {**
 
-**    console.error('Error en la solicitud GET:', error);**
+**console.error('Error en la solicitud GET:', error);**
 
-**  });**
+**});**
 
 A pesar de las pocas líneas que implementa el código, ya nos está dando una lectura a través de la consola, así como gestionando y mostrando mensajes de error en el caso de que la solicitud fuera fallida…
 
@@ -52,13 +52,13 @@ La respuesta que nos daría la API de AEMET en este caso sería un conjunto de d
 
 **{**
 
-**  "descripcion" : "exito",**
+**"descripcion" : "exito",**
 
-**  "estado" : 200,**
+**"estado" : 200,**
 
-**  "datos" : "https://opendata.aemet.es/opendata/sh/f24dba3a",**
+**"datos" : "https://opendata.aemet.es/opendata/sh/f24dba3a",**
 
-**  "metadatos" : "https://opendata.aemet.es/opendata/sh/142417df"**
+**"metadatos" : "https://opendata.aemet.es/opendata/sh/142417df"**
 
 **}**
 
@@ -82,47 +82,47 @@ En el siguiente ejemplo se muestra otro de los puntos fuertes de **Axios**, la g
 
 **axios.get('https://api.example.com/data')**
 
-**  .then(response => {**
+**.then(response => {**
 
-**    console.log('Datos recibidos:', response.data); ** 
+**console.log('Datos recibidos:', response.data); ** 
 
-     // Maneja la respuesta exitosa
+// Maneja la respuesta exitosa
 
-**  })**
+**})**
 
-**  .catch(error => {**
+**.catch(error => {**
 
-     // Manejar errores
+// Manejar errores
 
-**    if (error.response) {**
+**if (error.response) {**
 
-**     ** // La solicitud se completó y el servidor respondió con un código de estado fuera del rango 2xx
+// La solicitud se completó y el servidor respondió con un código de estado fuera del rango 2xx
 
-**      console.error('Error en la respuesta:', error.response.data);**
+**console.error('Error en la respuesta:', error.response.data);**
 
-**      console.error('Código de estado:', error.response.status);**
+**console.error('Código de estado:', error.response.status);**
 
-**      console.error('Encabezados:', error.response.headers);**
+**console.error('Encabezados:', error.response.headers);**
 
-**    } else if (error.request) {**
+**} else if (error.request) {**
 
-**     ** // La solicitud fue hecha pero no se recibió respuesta (problema de red, timeout, etc.)
+// La solicitud fue hecha pero no se recibió respuesta (problema de red, timeout, etc.)
 
-**      console.error('No se recibió respuesta del servidor:', error.request);**
+**console.error('No se recibió respuesta del servidor:', error.request);**
 
-**    } else {**
+**} else {**
 
-      // Ocurrió un error al configurar la solicitud
+// Ocurrió un error al configurar la solicitud
 
-**      console.error('Error al configurar la solicitud:', error.message);**
+**console.error('Error al configurar la solicitud:', error.message);**
 
-**    }**
+**}**
 
-**    console.error('Información completa del error:', error.config);  **
+**console.error('Información completa del error:', error.config);  **
 
-     // Muestra la configuración que se usó en la solicitud
+// Muestra la configuración que se usó en la solicitud
 
-**  });**
+**});**
 
 Según las respuestas que nos dé el servicio, podremos mostrar un error u otro para aislar y enfocar cuál ha sido el error que se ha producido al hacer la solicitud.
 
@@ -223,7 +223,7 @@ Este es uno de los usos más comunes. Queremos saber cuando el usuario va a puls
 
 **boton.addEventListener('click', () => {**
 
-**  alert('¡Botón clickeado!');**
+**alert('¡Botón clickeado!');**
 
 **});**
 
@@ -238,7 +238,7 @@ Event listeners esperando al presionar de una  tecla.
 
 **document.addEventListener('keydown', (event) => {**
 
-**  console.log(`Tecla presionada: ${event.key}`);**
+**console.log(`Tecla presionada: ${event.key}`);**
 
 **});**
 
@@ -251,7 +251,7 @@ Respuesta al desplazamiento del usuario en la página.
 
 **window.addEventListener('scroll', () => {**
 
-**  console.log('La página se está desplazando.');**
+**console.log('La página se está desplazando.');**
 
 **});**
 
@@ -268,7 +268,7 @@ Puedes reaccionar cuando el valor de un campo de texto cambia.
 
 **campoTexto.addEventListener('input', () => {**
 
-**  console.log(`Valor actual: ${campoTexto.value}`);**
+**console.log(`Valor actual: ${campoTexto.value}`);**
 
 **});**
 
