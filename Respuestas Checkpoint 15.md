@@ -1,6 +1,6 @@
 
 
-                 **##CHECKPOINT 15##**
+                 **CHECKPOINT 15**
 
 **¿Qué es Axios? ¿que beneficios tiene? ¿cúando lo usarías?**
 
