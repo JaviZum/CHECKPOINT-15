@@ -137,13 +137,13 @@ Según las respuestas que nos dé el servicio, podremos mostrar un error u otro 
 
 **error.response**: Aquí es donde encuentras la respuesta del servidor. Si la solicitud se envió correctamente pero el servidor devolvió un error (como un **404** o un **500**), puedes acceder a los datos de la respuesta (**error.response.data**), el código de estado (error.response.status), y los encabezados (**error.response.headers**).
 
-**error.reques<code>t</code></strong>: Si la solicitud fue enviada pero <strong>no se recibió ninguna respuesta</strong>, encontrarás los detalles del error en <strong>error.request</strong>. Esto puede suceder en situaciones como problemas de red o cuando el servidor no está disponible.
+**error.request**: Si la solicitud fue enviada pero <strong>no se recibió ninguna respuesta</strong>, encontrarás los detalles del error en <strong>error.request</strong>. Esto puede suceder en situaciones como problemas de red o cuando el servidor no está disponible.
 
 **error.message**: Si ocurrió un error al configurar la solicitud (antes de que se enviara), error.message te dará detalles sobre ese error.
 
 **error.config**: Muestra la configuración original de la solicitud, lo que puede ser útil para depurar problemas.
 
-En resumen, se podría decir que **Axios **es como un cartero que nos permite hacer envíos de cartas/paquetes  a cualquier dirección existente, así como también el recibo de los mismos. En el caso de que hubiera algún problema con los paquetes enviados o recibidos, el mismo cartero se encargará de gestionar los errores y comunicárnoslo si así se lo hemos indicado previamente.
+En resumen, se podría decir que **Axio**es como un cartero que nos permite hacer envíos de cartas/paquetes  a cualquier dirección existente, así como también el recibo de los mismos. En el caso de que hubiera algún problema con los paquetes enviados o recibidos, el mismo cartero se encargará de gestionar los errores y comunicárnoslo si así se lo hemos indicado previamente.
 
 **¿Por qué es útil React Devtools?**
 
@@ -152,24 +152,20 @@ Básicamente porque te permite acceder en tiempo real a valores de estado (**sta
 Resumiendo, obtener información detallada sobre el estado y las propiedades de cada componente que conforma nuestra estructura del árbol de componentes en tiempo real.
 
 
-### A pesar de que React DevTools tiene como principal objetivo el comentado al principio, las opciones que nos otorga de cara a optimizar el depurado del código son numerosas, y se listan a continuación las principales:
+A pesar de que React DevTools tiene como principal objetivo el comentado al principio, las opciones que nos otorga de cara a optimizar el depurado del código son numerosas, y se listan a continuación las principales:
 
 
-### **Inspeccionar la estructura de componentes**
+**Inspeccionar la estructura de componentes**
 
 React DevTools te permite ver la estructura del árbol de componentes de tu aplicación React. Esto es importante porque React maneja el DOM virtual y puede ser difícil ver cómo los componentes se relacionan entre sí solo desde el DOM real.
-
-
 
 * Puedes expandir y colapsar los componentes para explorar su jerarquía.
 * Ver qué componentes están montados en qué parte de la aplicación.
 
 
-### **Ver y modificar el estado y las props**
+**Ver y modificar el estado y las props**
 
-Puedes ver y **manipular el estado (<code>state</code>)</strong> y las <strong>propiedades (<code>props</code>)</strong> de los componentes.
-
-
+Puedes ver y manipular el estado (<code>state</code>)</strong> y las <strong>propiedades (<code>props</code>)</strong> de los componentes.
 
 * Te permite saber cuál es el estado actual de un componente en cualquier momento.
 * Puedes modificar el estado o las props directamente desde React DevTools para probar cómo se comporta tu aplicación sin necesidad de cambiar el código.
@@ -177,26 +173,24 @@ Puedes ver y **manipular el estado (<code>state</code>)</strong> y las <strong>p
 Esto es clave cuando estás depurando un comportamiento inesperado o verificando cómo se actualizan los estados.
 
 
-### **Depurar componentes de clase y funcionales con hooks**
+**Depurar componentes de clase y funcionales con hooks**
 
-Si utilizamos **hooks**, React DevTools nos permite inspeccionar los **valores de los **mismos dentro de los componentes funcionales.
-
-
+Si utilizamos **hooks**, React DevTools nos permite inspeccionar los valores de los mismos dentro de los componentes funcionales.
 
 * Puedes ver el valor de cada hook como **useState, useEffect, useContext, **etc., lo que facilita mucho depurar problemas relacionados con éstos.
 
 
-### **Simular ciclos de vida de los componentes**
+**Simular ciclos de vida de los componentes**
 
 En los componentes de clase, React DevTools también te permite ver el ciclo de vida del componente, como cuando se montan, actualizan o desmontan. Esto puede ser útil para ver en qué punto de su ciclo de vida un componente está causando problemas. Implementandolo con la opción debugger, podremos parar la aplicación allá donde sepamos que nos está dando problemas, y chequear ese punto como si congeláramos la reproducción en un video y pudiésemos analizar -y modificar- en ese momento cualquier detalle de la imagen -
 
 
-### **Depuración en tiempo real**
+**Depuración en tiempo real**
 
 Lo que se muestras en React DevTools se actualiza en tiempo real mientras interactúas con la aplicación. Esto quiere decir que se puede hacer clic en un botón, cambiar algo en tu aplicación y ver cómo eso afecta el estado, las props y el comportamiento del componente en ese mismo instante.
 
 
-### **Uso polivalente tanto en desarrollo como en producción**
+**Uso polivalente tanto en desarrollo como en producción**
 
 React DevTools no solo es útil en el entorno de desarrollo, sino que también se puede usar en producción, lo que te permite inspeccionar problemas directamente en una aplicación en vivo.
 
@@ -205,21 +199,20 @@ React DevTools no solo es útil en el entorno de desarrollo, sino que también s
 Un event listener es una función de JavaScript que se utiliza dejando unos “testigos” como escucha en el código, a la espera que se produzcan determinadas acciones dentro de la página para que se ejecuten, respondiendo así a eventos específicos en la web, como clicks, teclas presionadas, desplazamientos, y demás.
 
 
-### El principal beneficio que achacaría yo a los event listener es la automatización del proceso. De hecho, una vez que hayamos programado el mismo, éste esperará hasta que se cumpla la condición que desencadenará la ejecución de una acción determinada consecuencia del evento. Si no dispusiéramos de esta herramienta, simplemente tendríamos que tener a alguien pendiente de la página, e interactuar manualmente cuando se diera un evento determinado. Esto no es viable…
+El principal beneficio que achacaría yo a los event listener es la automatización del proceso. De hecho, una vez que hayamos programado el mismo, éste esperará hasta que se cumpla la condición que desencadenará la ejecución de una acción determinada consecuencia del evento. Si no dispusiéramos de esta herramienta, simplemente tendríamos que tener a alguien pendiente de la página, e interactuar manualmente cuando se diera un evento determinado. Esto no es viable…
 
 Seguidamente acompaño un listado ampliando las características principale de los event listener:
 
-
-
 1. **Interactividad**: Permite que la aplicación responda de forma automática a las acciones del usuario que coincidan con las que nosotros hayamos programado previamente en los listeners, como hacer clic en un botón,  mover el ratón por un área del DOM determinada, llevar el puntero a un lugar, etc.
+
 2. **Desacoplamiento**: Separan la lógica de manejo de eventos del resto del código, lo que hace que éste esté mejor organizado, lo que redundará en el futuro en que las labores para mantener el código sean más sencillas, al ser el conjunto más modular y organizado.
+
 3. **Flexibilidad**: Según se requiera en la página, se pueden añadir, quitar o modificar event listeners de forma muy dinámica, adaptando el comportamiento de la página o los objetivos de los mismos, según sea necesario.
 
 
-### A continuación se acompaña una lista de usos más habituales dentro del abanico de usos de Event Listeners:
+A continuación se acompaña una lista de usos más habituales dentro del abanico de usos de Event Listeners:
 
-
-#### 1. **Espera de un click en botón**
+ 1. **Espera de un click en botón**
 
 Este es uno de los usos más comunes. Queremos saber cuando el usuario va a pulsar un botón para realizar determinada acción en la página; podría tratarse de la casilla de un formulario, señalar una casilla de validación, o cualquier otra…
 
@@ -240,7 +233,7 @@ Cuando el usuario hace click en el botón, se mostrará un mensaje de alerta.
 La primera parte del código, la referida al botón, pertenece al HTML.
 
 
-#### 2. **Espera de la pulsación de una tecla**
+2. **Espera de la pulsación de una tecla**
 
 Event listeners esperando al presionar de una  tecla.
 
@@ -254,7 +247,7 @@ console.log(`Tecla presionada: ${event.key}`);
 Cada vez que el usuario presiona una tecla, se imprime en la consola el nombre de la tecla presionada.
 
 
-#### 3. **Escuchar el desplazamiento de la página**
+3. **Escuchar el desplazamiento de la página**
 
 Respuesta al desplazamiento del usuario en la página.
 
@@ -269,7 +262,7 @@ console.log('La página se está desplazando.');
 Cada vez que el usuario se desplaza por la página, se imprime un mensaje en la consola.
 
 
-#### 4. **Escuchar un cambio en un campo de texto**
+4. **Escuchar un cambio en un campo de texto**
 
 Puedes reaccionar cuando el valor de un campo de texto cambia.
 
