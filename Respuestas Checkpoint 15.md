@@ -138,7 +138,7 @@ Según las respuestas que nos dé el servicio, podremos mostrar un error u otro 
 
 **error.config**: Muestra la configuración original de la solicitud, lo que puede ser útil para depurar problemas.
 
-En resumen, se podría decir que **Axio**es como un cartero que nos permite hacer envíos de cartas/paquetes  a cualquier dirección existente, así como también el recibo de los mismos. En el caso de que hubiera algún problema con los paquetes enviados o recibidos, el mismo cartero se encargará de gestionar los errores y comunicárnoslo si así se lo hemos indicado previamente.
+En resumen, se podría decir que **Axios** es como un cartero que nos permite hacer envíos de cartas/paquetes  a cualquier dirección existente, así como también el recibo de los mismos. En el caso de que hubiera algún problema con los paquetes enviados o recibidos, el mismo cartero se encargará de gestionar los errores y comunicárnoslo si así se lo hemos indicado previamente.
 
 
 ### **¿Por qué es útil React Devtools?**
