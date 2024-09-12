@@ -70,12 +70,7 @@ En los datos recibidos podemos observar que la solicitud se ejecutó satisfactor
 
 Yendo a la página  **[https://opendata.aemet.es/opendata/sh/f24dba3a](https://opendata.aemet.es/opendata/sh/f24dba3a)**, obtenemos una imagen de la península ibérica con el mapa solicitado. (Se puede apreciar que toda la Cornisa Cantábrica, donde vivimos,  es un auténtico vergel vestidito de #008f39.
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image1.png "image_tooltip")
+[peninsula](./peninsula.png)
 
 
 NOTA: Para poder extraer datos de las API de AEMET necesitamos registrarnos para recibir una API KEY, que no es sino una serie de caracteres que nos permiten validarnos/autenticarnos para realizar la petición.
