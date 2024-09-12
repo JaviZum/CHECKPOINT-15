@@ -70,7 +70,7 @@ En los datos recibidos podemos observar que la solicitud se ejecutó satisfactor
 
 Yendo a la página  **[https://opendata.aemet.es/opendata/sh/f24dba3a](https://opendata.aemet.es/opendata/sh/f24dba3a)**, obtenemos una imagen de la península ibérica con el mapa solicitado. (Se puede apreciar que toda la Cornisa Cantábrica, donde vivimos,  es un auténtico vergel vestidito de #008f39.
 
-[peninsula](./peninsula.png)
+![peninsula](./peninsula.png)
 
 
 NOTA: Para poder extraer datos de las API de AEMET necesitamos registrarnos para recibir una API KEY, que no es sino una serie de caracteres que nos permiten validarnos/autenticarnos para realizar la petición.
@@ -130,9 +130,9 @@ Según las respuestas que nos dé el servicio, podremos mostrar un error u otro 
 
 ### El manejo de los errores sería el siguiente:
 
-**error.response**: Aquí es donde encuentras la respuesta del servidor. Si la solicitud se envió correctamente pero el servidor devolvió un error (como un **404** o un **500**), puedes acceder a los datos de la respuesta (**error.response.data**), el código de estado (error.response.status), y los encabezados (**error.response.headers**).
+**error.response**: Aquí es donde encuentras la respuesta del servidor. Si la solicitud se envió correctamente pero el servidor devolvió un error (como un **404** o un **500**), puedes acceder a los datos de la respuesta (**error.response.data**), el código de estado (**error.response.status**), y los encabezados (**error.response.headers**).
 
-**error.request**: Si la solicitud fue enviada pero <strong>no se recibió ninguna respuesta</strong>, encontrarás los detalles del error en <strong>error.request</strong>. Esto puede suceder en situaciones como problemas de red o cuando el servidor no está disponible.
+**error.request**: Si la solicitud fue enviada pero no se recibió ninguna respuesta, encontrarás los detalles del error en **error.request**. Esto puede suceder en situaciones como problemas de red o cuando el servidor no está disponible.
 
 **error.message**: Si ocurrió un error al configurar la solicitud (antes de que se enviara), error.message te dará detalles sobre ese error.
 
@@ -212,7 +212,7 @@ A continuación se acompaña una lista de usos más habituales dentro del abanic
 Este es uno de los usos más comunes. Queremos saber cuando el usuario va a pulsar un botón para realizar determinada acción en la página; podría tratarse de la casilla de un formulario, señalar una casilla de validación, o cualquier otra…
 
 ```
-&lt;button id="miBoton">Haz clic en mí&lt;/button>
+<button id="miBoton">Haz clic en mí</button>
 
 const boton = document.getElementById('miBoton');
 
@@ -263,7 +263,7 @@ Puedes reaccionar cuando el valor de un campo de texto cambia.
 
 
 ```
-&lt;input type="text" id="miCampoTexto" placeholder="Escribe algo">
+<input type="text" id="miCampoTexto" placeholder="Escribe algo">
 
 const campoTexto = document.getElementById('miCampoTexto');
 
