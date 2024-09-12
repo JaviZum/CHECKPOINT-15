@@ -1,8 +1,8 @@
 
 
-**CHECKPOINT 15**
+## **CHECKPOINT 15**
 
-**¿Qué es Axios? ¿que beneficios tiene? ¿cúando lo usarías?**
+### **¿Qué es Axios? ¿que beneficios tiene? ¿cúando lo usarías?**
 
 Axios es una librería de Javascript que está enfocada en ayudarnos en las comunicaciones de envío / solicitud de información entre un programa que nosotros creemos y un servidor o una API que provee / recibe datos para su almacenamiento, proceso, etc
 
@@ -128,7 +128,7 @@ console.error('Información completa del error:', error.config);
 Según las respuestas que nos dé el servicio, podremos mostrar un error u otro para aislar y enfocar cuál ha sido el error que se ha producido al hacer la solicitud.
 
 
-### El manejo de los errores sería el siguiente:
+**El manejo de los errores sería el siguiente:**
 
 **error.response**: Aquí es donde encuentras la respuesta del servidor. Si la solicitud se envió correctamente pero el servidor devolvió un error (como un **404** o un **500**), puedes acceder a los datos de la respuesta (**error.response.data**), el código de estado (**error.response.status**), y los encabezados (**error.response.headers**).
 
@@ -140,7 +140,8 @@ Según las respuestas que nos dé el servicio, podremos mostrar un error u otro 
 
 En resumen, se podría decir que **Axio**es como un cartero que nos permite hacer envíos de cartas/paquetes  a cualquier dirección existente, así como también el recibo de los mismos. En el caso de que hubiera algún problema con los paquetes enviados o recibidos, el mismo cartero se encargará de gestionar los errores y comunicárnoslo si así se lo hemos indicado previamente.
 
-**¿Por qué es útil React Devtools?**
+
+### **¿Por qué es útil React Devtools?**
 
 Básicamente porque te permite acceder en tiempo real a valores de estado (**state**) o propiedades (**props**) de forma directa a través de la búsqueda de los mismos vía la opción **componentes**, para hacer pruebas de funcionamiento, comprobar el estado de cualquier elemento u obtener información en un determinado momento sobre el valor que tenemos dentro de una propiedad en concreto.
 
