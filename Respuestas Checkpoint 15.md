@@ -1,6 +1,6 @@
 
 
-**CHECKPOINT 15**
+##**CHECKPOINT 15**##
 
 **¿Qué es Axios? ¿que beneficios tiene? ¿cúando lo usarías?**
 
@@ -27,7 +27,7 @@ console.error('Error en la solicitud GET:', error);
 ```
 A pesar de las pocas líneas que implementa el código, ya nos está dando una lectura a través de la consola, así como gestionando y mostrando mensajes de error en el caso de que la solicitud fuera fallida…
 
-Una de las grandes ventajas que tiene **Axios **es que realiza las citadas solicitudes de forma asíncrona. Normalmente estas acciones no se ejecutarán instantáneamente, sino que demorarán algo de tiempo en llevarse a cabo. En lugar de esperar, la página seguirá corriendo mientras **Axios** se encarga de gestionar los estados de las Promesas, que es como se les llama a estas operaciones asíncronas.
+Una de las grandes ventajas que tiene **Axios**es que realiza las citadas solicitudes de forma asíncrona. Normalmente estas acciones no se ejecutarán instantáneamente, sino que demorarán algo de tiempo en llevarse a cabo. En lugar de esperar, la página seguirá corriendo mientras **Axios** se encarga de gestionar los estados de las Promesas, que es como se les llama a estas operaciones asíncronas.
 
 Los estados de una Promesa son los siguientes:
 
@@ -68,7 +68,7 @@ La respuesta que nos daría la API de AEMET en este caso sería un conjunto de d
 ```
 En los datos recibidos podemos observar que la solicitud se ejecutó satisfactoriamente por el valor de estado 200. 
 
-Yendo a la página  **[https://opendata.aemet.es/opendata/sh/f24dba3a](https://opendata.aemet.es/opendata/sh/f24dba3a)**, obtenemos una imagen de la península ibérica con el mapa solicitado. (Se puede apreciar que toda la Cornisa Cantábrica, donde vivimos,  es un auténtico vvergel vestidito de #.
+Yendo a la página  **[https://opendata.aemet.es/opendata/sh/f24dba3a](https://opendata.aemet.es/opendata/sh/f24dba3a)**, obtenemos una imagen de la península ibérica con el mapa solicitado. (Se puede apreciar que toda la Cornisa Cantábrica, donde vivimos,  es un auténtico vergel vestidito de #008f39.
 
 
 
