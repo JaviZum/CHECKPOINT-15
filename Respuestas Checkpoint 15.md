@@ -190,7 +190,8 @@ Lo que se muestras en React DevTools se actualiza en tiempo real mientras intera
 
 React DevTools no solo es útil en el entorno de desarrollo, sino que también se puede usar en producción, lo que te permite inspeccionar problemas directamente en una aplicación en vivo.
 
-**¿Qué es un event listener? ¿que beneficios tiene? pon ejemplos**
+
+### **¿Qué es un event listener? ¿que beneficios tiene? pon ejemplos**
 
 Un event listener es una función de JavaScript que se utiliza dejando unos “testigos” como escucha en el código, a la espera que se produzcan determinadas acciones dentro de la página para que se ejecuten, respondiendo así a eventos específicos en la web, como clicks, teclas presionadas, desplazamientos, y demás.
 
