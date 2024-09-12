@@ -2,7 +2,7 @@
 
 ## **CHECKPOINT 15**
 
-### **¿Qué es Axios? ¿que beneficios tiene? ¿cúando lo usarías?**
+## **¿Qué es Axios? ¿que beneficios tiene? ¿cúando lo usarías?**
 
 Axios es una librería de Javascript que está enfocada en ayudarnos en las comunicaciones de envío / solicitud de información entre un programa que nosotros creemos y un servidor o una API que provee / recibe datos para su almacenamiento, proceso, etc
 
@@ -141,7 +141,7 @@ Según las respuestas que nos dé el servicio, podremos mostrar un error u otro 
 En resumen, se podría decir que **Axios** es como un cartero que nos permite hacer envíos de cartas/paquetes  a cualquier dirección existente, así como también el recibo de los mismos. En el caso de que hubiera algún problema con los paquetes enviados o recibidos, el mismo cartero se encargará de gestionar los errores y comunicárnoslo si así se lo hemos indicado previamente.
 
 
-### **¿Por qué es útil React Devtools?**
+## **¿Por qué es útil React Devtools?**
 
 Básicamente porque te permite acceder en tiempo real a valores de estado (**state**) o propiedades (**props**) de forma directa a través de la búsqueda de los mismos vía la opción **componentes**, para hacer pruebas de funcionamiento, comprobar el estado de cualquier elemento u obtener información en un determinado momento sobre el valor que tenemos dentro de una propiedad en concreto.
 
@@ -191,7 +191,7 @@ Lo que se muestras en React DevTools se actualiza en tiempo real mientras intera
 React DevTools no solo es útil en el entorno de desarrollo, sino que también se puede usar en producción, lo que te permite inspeccionar problemas directamente en una aplicación en vivo.
 
 
-### **¿Qué es un event listener? ¿que beneficios tiene? pon ejemplos**
+## **¿Qué es un event listener? ¿que beneficios tiene? pon ejemplos**
 
 Un event listener es una función de JavaScript que se utiliza dejando unos “testigos” como escucha en el código, a la espera que se produzcan determinadas acciones dentro de la página para que se ejecuten, respondiendo así a eventos específicos en la web, como clicks, teclas presionadas, desplazamientos, y demás.
 
